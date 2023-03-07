@@ -50,7 +50,7 @@ function renderMessages() {
     btn.addEventListener("click", (e) => {
       let index = e.target.getAttribute("data-index");
       let message = messages[index];
-      // Burada mesaj kutusunu düzenlemek için gerekli işlemleri yapabilirsiniz
+   
     });
   });
 
@@ -72,7 +72,7 @@ function renderMessages() {
       let index = e.target.getAttribute("data-index");
       let messages = JSON.parse(localStorage.getItem("messages")) || [];
       let message = messages[index];
-      message.favorite = !message.favorite; // toggle the favorite state of the message
+      message.favorite = !message.favorite; 
       localStorage.setItem("messages", JSON.stringify(messages));
       renderMessages();
     });
